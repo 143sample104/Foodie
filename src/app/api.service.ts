@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { LOCAL_STORAGE,WebStorageService } from 'angular-webstorage-service';
 
-let apiURL = "http://192.168.1.50:8080/foodie/";
-let apiURL1 = "http://192.168.1.50:8080/users/";
-let apiURL2 = "http://192.168.1.50:8080/";
+let apiURL = "http://103.207.1.123:81/foodie/";
+let apiURL1 = "http://103.207.1.123:81/users/";
+let apiURL2 = "http://103.207.1.123:81/";
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class ApiService {
 
   // setUserSession(userData,userStatus){
 
-    
+
   // }
 
 
@@ -50,14 +50,14 @@ export class ApiService {
     return new Promise((resolve , reject) =>{
       let headers =new HttpHeaders();
       //headers.append("Content-Type","application/json");
-     
+
       this.http.get(apiURL+type,{headers:headers}).
       subscribe (data =>{
         console.log("success");
         console.log(this.result1);
         resolve(data);
       },(err)=>{
-        reject(err);  
+        reject(err);
       });
     });
   }
@@ -72,7 +72,7 @@ export class ApiService {
         console.log("success");
         resolve(data);
       },(err)=>{
-        reject(err);  
+        reject(err);
       });
     });
   }
@@ -86,7 +86,7 @@ export class ApiService {
         console.log("success");
         resolve(data);
       },(err)=>{
-        reject(err);  
+        reject(err);
       });
     });
   }
@@ -95,14 +95,14 @@ export class ApiService {
     return new Promise((resolve , reject) =>{
       let headers =new HttpHeaders();
       //headers.append("Content-Type","application/json");
-     
+
       this.http.get('http://maps.google.com/maps/api/geocode/json?address=' + type + 'CA&sensor=false',{headers:headers}).
       subscribe (data =>{
         console.log("success");
         console.log(this.result1);
         resolve(data);
       },(err)=>{
-        reject(err);  
+        reject(err);
       });
     });
    /*  return this.http.get('http://maps.google.com/maps/api/geocode/json?address=' + term + 'CA&sensor=false')
@@ -154,7 +154,7 @@ postDetails(details,type){
       console.log("success");
       resolve(data);
     },(err)=>{
-      reject(err);  
+      reject(err);
     });
   });
 }
@@ -169,7 +169,7 @@ postDetails(details,type){
 //       console.log("success");
 //       resolve(data);
 //     },(err)=>{
-//       reject(err);  
+//       reject(err);
 //     });
 //   });
 
@@ -224,7 +224,7 @@ getUserOrders(details,type){
       console.log("success");
       resolve(data);
     },(err)=>{
-      reject(err);  
+      reject(err);
     });
   });
 }
@@ -241,19 +241,19 @@ changeAddress(details,type){
       console.log("success");
       resolve(data);
     },(err)=>{
-      reject(err);  
+      reject(err);
     });
   });
 }
 
 setAdminLoggedIn(){
-  this.adminLoggedIn=true; 
+  this.adminLoggedIn=true;
 }
 getAdminLoggedIn(){
   return this.adminLoggedIn;
 }
 setUserLoggedIn(){
-  this.userLoggedIn=true; 
+  this.userLoggedIn=true;
 }
 getUserLoggedIn(){
   return this.userLoggedIn;
