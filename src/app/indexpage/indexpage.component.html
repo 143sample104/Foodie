@@ -1,4 +1,4 @@
-
+<br><br><br><br>
 <div>
   <br>
 <input class="form-control" [(ngModel)]="searchTex" placeholder="Search Foods and Locations" aria-label="Search">
@@ -7,21 +7,21 @@
 <br>
 
 <div style="background-color: rgb(190, 186, 181);" class="row">
-  
+
     <div class="col-sm-6 col-lg-3 col-md-4 col-xs-12 rounded" *ngFor="let c of listData| filter:searchTex; let i of index ">
        <div class="p-1 align-self-center" style="height: 100%;width: 100%;background-color: bisque;">
          <a (click)="openModalDialog(i)">
-            
+
       <img class="img-responsive" [src]="c.img" width="100%" height="60%">
        <p class="p-3  text-secondary">{{c.name}}</p><a class="text-secondary" href={{c.address}}>{{c.address}}</a>
        <span class="badge badge-pill badge-primary">{{c.rating}}</span>
-      
+
        </a>
       </div>
       </div>
-    
-      
-  
+
+
+
   </div>
 
 <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
@@ -34,7 +34,7 @@
           <button type="button" class="close" aria-label="Close" (click)="closeModalDialog()"><span aria-hidden="true">&times;</span></button>
           <!-- <h4 class="modal-title">Login</h4> -->
         </div>
-  
+
         <!-- modal-body -->
         <div class="modal-body" >
           <div class="row" id="vicky1">
@@ -42,9 +42,9 @@
             <img [src]="this.popup?.img"  width="200" height="200"><br>
                  Food name:{{this.popup?.name}}
                  Rating:{{this.popup?.rating}}<br>
-                 Address:{{this.popup?.address}}          
+                 Address:{{this.popup?.address}}
               </div>
-              
+
               <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
                   Price: {{this.popup?.price}}<br>
                   <div *ngIf="itemClicked">
@@ -57,7 +57,7 @@
               </div>
           </div>
         </div>
-  
+
         <!-- modal-footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-default" (click)="closeModalDialog()" >Close</button>
@@ -75,4 +75,3 @@
   <app-map></app-map>
   </div>
 </div>
-

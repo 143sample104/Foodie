@@ -33,15 +33,15 @@
                          <tr >
                             <label>Address: </label>
                             <td>{{listData?.address}}</td>
-                        </tr>                        
+                        </tr>
                     </div>
                   </div>
                   <div id="orders" class="tab-pane fade ">
                       <div class="row pb-2">
                           <div class="col-md-7">
                               Orders
-                         <table id="customers" > 
-                           
+                         <table id="customers" >
+
                             <tr>
                               <th>S no</th>
                               <th>Product</th>
@@ -55,9 +55,9 @@
                                   <td>{{order.address}}</td>
                                   <td>{{order.price}}</td>
                                   <td>{{order.quantity}}</td>
-                                </tr>                              
+                                </tr>
                             </table>
-                          
+
                               </div>
                           <div class="col-md-5"></div>
                       </div>
@@ -69,58 +69,58 @@
                   </div>
                   <div id="update" class="tab-pane fade">
                       <div class="list-group">
-                        
+
                         <div class="row">
                             <div class="col-md-10">
                                 <form>
                                   <div class="form-group row">
-                                    <label for="username" class="col-4 col-form-label">User Name*</label> 
+                                    <label for="username" class="col-4 col-form-label">User Name*</label>
                                     <div class="col-8">
                                       <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text"  [(ngModel)]="updateDetails.name" [ngModelOptions]="{standalone: true}" [value]="this.listData.name">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="name" class="col-4 col-form-label">Email</label> 
+                                    <label for="name" class="col-4 col-form-label">Email</label>
                                     <div class="col-8">
                                       <input id="name" name="name" placeholder="Email" class="form-control here" type="email"  [(ngModel)]="updateDetails.email" [ngModelOptions]="{standalone: true}" [value]="this.listData.email">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="lastname" class="col-4 col-form-label">Mobile number</label> 
+                                    <label for="lastname" class="col-4 col-form-label">Mobile number</label>
                                     <div class="col-8">
                                       <input id="lastname" name="Mobile number" placeholder="Mobile number" class="form-control here" type="number" [(ngModel)]="updateDetails.phno" [ngModelOptions]="{standalone: true}" [value]="this.listData.phno">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="text" class="col-4 col-form-label">Address</label> 
+                                    <label for="text" class="col-4 col-form-label">Address</label>
                                     <div class="col-8">
                                       <input id="text" name="text" placeholder="Address" class="form-control here" required="required" type="text" [(ngModel)]="updateDetails.address" [ngModelOptions]="{standalone: true}" [value]="this.listData.address">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="select" class="col-4 col-form-label">Password</label> 
+                                    <label for="select" class="col-4 col-form-label">Password</label>
                                     <div class="col-8">
                                         <input id="text" name="text" placeholder="Password" class="form-control here" required="required" type="password" [(ngModel)]="updateDetails.password" [ngModelOptions]="{standalone: true}" [value]="this.listData.password">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="email" class="col-4 col-form-label">Confirm password</label> 
+                                    <label for="email" class="col-4 col-form-label">Confirm password</label>
                                     <div class="col-8">
                                       <input id="email" name="email" placeholder="Confirm password" class="form-control here" required="required" type="password"  [(ngModel)]="updateDetails1.confirmpassword" [ngModelOptions]="{standalone: true}" [value]="this.listData.password">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="website" class="col-4 col-form-label">Security question</label> 
+                                    <label for="website" class="col-4 col-form-label">Security question</label>
                                     <div class="col-8">
                                       <input id="website" name="website" placeholder="eg: what is your nick name" class="form-control here" type="text"  [(ngModel)]="updateDetails.securityquestion" [ngModelOptions]="{standalone: true}" [value]="this.listData.securityquestion">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="newpass" class="col-4 col-form-label">Security answer</label> 
+                                    <label for="newpass" class="col-4 col-form-label">Security answer</label>
                                     <div class="col-8">
                                       <input id="newpass" name="newpass" placeholder="Your security answer" class="form-control here" type="text" [(ngModel)]="updateDetails.securityanswer" [ngModelOptions]="{standalone: true}" [value]="this.listData.securityanswer">
                                     </div>
-                                  </div> 
+                                  </div>
                                   <div class="form-group row">
                                     <div class="offset-4 col-8">
                                       <button name="submit" type="submit" class="btn btn-primary" (click)="updateProfile()">Update My Profile</button>
@@ -137,4 +137,3 @@
           </div>
       </div>
   </section>
-  
